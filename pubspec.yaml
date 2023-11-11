@@ -8,24 +8,22 @@ environment:
   sdk: '>=3.1.5 <4.0.0'
 
 dependencies:
+  cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
-
-
-  cupertino_icons: ^1.0.2
+  flutter_spinkit: ^5.2.0
+  geocoding: ^2.1.1
+  geolocator: ^10.1.0
   get: ^4.6.6
   http: ^1.1.0
   intl: ^0.18.1
-  geolocator: ^10.1.0
-  flutter_spinkit: ^5.2.0
   pull_to_refresh: ^2.0.0
 
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
 
   flutter_lints: ^2.0.0
-
+  flutter_test:
+    sdk: flutter
 
 flutter:
   uses-material-design: true
@@ -35,25 +33,25 @@ flutter:
     - assets/fonts/Poppins/
 
 fonts:
-    - family: Poppins
-      fonts:
-        - asset: assets/font/Poppins/Poppins-Italic.ttf
-          style: italic
-        - asset: assets/font/Poppins/Poppins-Black.ttf
-          weight: 900
-        - asset: assets/font/Poppins/Poppins-ExtraBold.ttf
-          weight: 800
-        - asset: assets/font/Poppins/Poppins-Bold.ttf
-          weight: 700
-        - asset: assets/font/Poppins/Poppins-SemiBold.ttf
-          weight: 600
-        - asset: assets/font/Poppins/Poppins-Medium.ttf
-          weight: 500
-        - asset: assets/font/Poppins/Poppins-Regular.ttf
-          weight: 400
-        - asset: assets/font/Poppins/Poppins-Light.ttf
-          weight: 300
-        - asset: assets/font/Poppins/Poppins-ExtraLight.ttf
-          weight: 200
-        - asset: assets/font/Poppins/Poppins-Thin.ttf
-          weight: 100
+  - family: Poppins
+    fonts:
+      - asset: assets/font/Poppins/Poppins-Italic.ttf
+        style: italic
+      - asset: assets/font/Poppins/Poppins-Black.ttf
+        weight: 900
+      - asset: assets/font/Poppins/Poppins-ExtraBold.ttf
+        weight: 800
+      - asset: assets/font/Poppins/Poppins-Bold.ttf
+        weight: 700
+      - asset: assets/font/Poppins/Poppins-SemiBold.ttf
+        weight: 600
+      - asset: assets/font/Poppins/Poppins-Medium.ttf
+        weight: 500
+      - asset: assets/font/Poppins/Poppins-Regular.ttf
+        weight: 400
+      - asset: assets/font/Poppins/Poppins-Light.ttf
+        weight: 300
+      - asset: assets/font/Poppins/Poppins-ExtraLight.ttf
+        weight: 200
+      - asset: assets/font/Poppins/Poppins-Thin.ttf
+        weight: 100

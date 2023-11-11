@@ -2,10 +2,59 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:weather_app/constants/mycolors.dart';
 import 'package:weather_app/constants/mydecor.dart';
 import 'package:weather_app/constants/mysizes.dart';
 
 class MyWidgets {
+  appbar({
+    required BuildContext context,
+    String? titletext,
+    Color? color,
+    Widget? action,
+  }) {
+    return AppBar(
+      backgroundColor: color ?? Colors.transparent,
+      elevation: 0,
+      title: titletext != null
+          ? Text(
+              titletext,
+              style: MyDecor().textstyle(
+                  fontcolor: Colors.black,
+                  fontweight: FontWeight.w500,
+                  fontsize: Sizes.w20),
+            )
+          : null,
+      leading: GestureDetector(
+        onTap: () {
+          Navigator.of(context).pop();
+        },
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Container(
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: Colors.white,
+              border: Border.all(
+                color: MyColors.lightgrey,
+              ),
+            ),
+            child: Center(
+              child: Icon(
+                Icons.arrow_back_ios_new,
+                color: Colors.black,
+                size: Sizes.w18,
+              ),
+            ),
+          ),
+        ),
+      ),
+      actions: [
+        if (action != null) action,
+      ],
+    );
+  }
+
   circleClose(BuildContext context) {
     return GestureDetector(
       onTap: () {
