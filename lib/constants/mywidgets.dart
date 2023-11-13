@@ -12,6 +12,7 @@ class MyWidgets {
     String? titletext,
     Color? color,
     Widget? action,
+    Widget? leading,
   }) {
     return AppBar(
       backgroundColor: color ?? Colors.transparent,
@@ -25,33 +26,33 @@ class MyWidgets {
                   fontsize: Sizes.w20),
             )
           : null,
-      leading: GestureDetector(
-        onTap: () {
-          Navigator.of(context).pop();
-        },
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Container(
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              color: Colors.white,
-              border: Border.all(
-                color: MyColors.lightgrey,
+      leading: leading != null
+          ? GestureDetector(
+              onTap: () {
+                Navigator.of(context).pop();
+              },
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.white,
+                    border: Border.all(
+                      color: MyColors.lightgrey,
+                    ),
+                  ),
+                  child: Center(
+                    child: Icon(
+                      Icons.arrow_back_ios_new,
+                      color: Colors.black,
+                      size: Sizes.w18,
+                    ),
+                  ),
+                ),
               ),
-            ),
-            child: Center(
-              child: Icon(
-                Icons.arrow_back_ios_new,
-                color: Colors.black,
-                size: Sizes.w18,
-              ),
-            ),
-          ),
-        ),
-      ),
-      actions: [
-        if (action != null) action,
-      ],
+            )
+          : null,
+      actions: action != null ? [action] : null,
     );
   }
 
